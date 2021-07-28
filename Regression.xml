@@ -1,0 +1,11 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="Practice Suite 1">   
+  <test name="Test Basics 1">    
+    
+    <classes>
+       <class name="SeleniumCode.Demo.TestCases"/>
+       <class name="SeleniumCode.Demo.TestCases2"/>
+    </classes>
+     
+  </test>
+</suite>

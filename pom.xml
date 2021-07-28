@@ -26,6 +26,7 @@
 					<configuration>
 						<suiteXmlFiles>
 							<suiteXmlFile>${suiteXmlFile}</suiteXmlFile>
+							<suiteXmlFile>Regression.xml</suiteXmlFile>
 						</suiteXmlFiles>
 					</configuration>
 				</plugin>

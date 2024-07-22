@@ -5,6 +5,7 @@ import org.testng.annotations.Test;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.Optional;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
@@ -58,11 +59,24 @@ public class Java8Demo {
     public void charcount()
     {
         // Creating a List of Strings
-        List<String> list = Arrays.asList("Geeks", "GFG", "GeeksforGeeks", "gfg");
+        List<String> list = Arrays.asList("A", "A", "C", "D","E","D");
 
-        // Using Stream flatMap(Function mapper)
-        list.stream()
-                .flatMap(str -> Stream.of(str.charAt(2)))
-                .forEach(System.out::println);
+        // Using distinct function
+        list.stream().distinct().forEach(System.out::println);
+        list.stream().limit(3).forEach(System.out::print);
+       long num =  list.stream().filter(n->n.startsWith("A")).count();
+       System.out.println(" "+num);
+    }
+
+    @Test
+    public void minmax()
+    {
+        // Creating a List of Integer
+        List<Integer> list = Arrays.asList(2,3,9,3,1,5);
+
+        // Using min function
+       Optional<Integer> min = list.stream().min( (a1, a2)->{ return a1.compareTo(a2); } );
+       System.out.println(min.get());
+
     }
 }
